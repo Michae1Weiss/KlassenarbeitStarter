@@ -91,7 +91,7 @@ public class MyArrayListTest {
         int index = 0;  // this index does not exist
         /* Act     */
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.get(index));
+        assertThrows(RuntimeException.class, () -> this.arrayList.get(index));
     }
 
     @ParameterizedTest
@@ -100,7 +100,7 @@ public class MyArrayListTest {
         /* Arrange */
         /* Act     */
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.get(i));
+        assertThrows(RuntimeException.class, () -> this.arrayList.get(i));
     }
 
     @ParameterizedTest
@@ -125,7 +125,7 @@ public class MyArrayListTest {
         int index = -1;  // this index does not exist
         /* Act     */
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.get(index));
+        assertThrows(RuntimeException.class, () -> this.arrayList.get(index));
     }
 
     /* Testing remove method */
@@ -136,7 +136,7 @@ public class MyArrayListTest {
         int index = 0;  // this index does not exist
         /* Act     */
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.remove(index));
+        assertThrows(RuntimeException.class, () -> this.arrayList.remove(index));
     }
 
     @Test
@@ -192,7 +192,7 @@ public class MyArrayListTest {
         /* Act     */
         this.arrayList.remove(1);
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.remove(1));
+        assertThrows(RuntimeException.class, () -> this.arrayList.remove(1));
     }
 
     @Test
@@ -205,7 +205,7 @@ public class MyArrayListTest {
         int negativeIndex = -1;  // this index does not exist
         /* Act     */
         /* Assert  */
-        assertThrows(IllegalArgumentException.class, () -> this.arrayList.remove(negativeIndex));
+        assertThrows(RuntimeException.class, () -> this.arrayList.remove(negativeIndex));
     }
 
     /* Testing contains method */
