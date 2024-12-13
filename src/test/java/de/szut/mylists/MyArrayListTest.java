@@ -45,7 +45,7 @@ public class MyArrayListTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"3:3", "5:5", "7:7", "100:100"}, delimiter = ':')
+    @CsvSource(value = {"3:3", "5:5", "7:7", "20:20", "30:30", "100:100"}, delimiter = ':')
     public void givenArrayListHasNEntries_whenSize_thenN(int n, int expected) {
         /* Arrange */
         // add N numbers
@@ -246,6 +246,21 @@ public class MyArrayListTest {
         /* Arrange */
         // add 10 entries
         for (int i = 0; i < 10; i++) {
+            this.arrayList.add(i);
+        };
+        /* Act     */
+        int firstNumber = this.arrayList.get(0);
+        boolean result = this.arrayList.contains(firstNumber);
+        /* Assert  */
+        assertThat(result).isTrue();
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {"3", "5", "23", "100", "202", "1001"})
+    public void givenArrayListWithNNumbers_whenContainsFirstNumber_thenTrue(int n) {
+        /* Arrange */
+        // add 10 entries
+        for (int i = 0; i < n; i++) {
             this.arrayList.add(i);
         };
         /* Act     */

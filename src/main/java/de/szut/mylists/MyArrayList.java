@@ -1,6 +1,10 @@
 package de.szut.mylists;
 
 public class MyArrayList {
+    public MyArrayList() {
+        int[] container = new int[10];
+    }
+
     /** Gibt die Anzahl der gespeicherten Zahlen zurück.
      *
      * @return
