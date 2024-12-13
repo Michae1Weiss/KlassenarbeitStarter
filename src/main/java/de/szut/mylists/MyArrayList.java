@@ -6,7 +6,7 @@ public class MyArrayList {
      * @return
      */
     int size() {
-
+        return 0;
     }
 
     /** Fügt eine Zahl am Ende der Liste ein.
@@ -22,7 +22,7 @@ public class MyArrayList {
      * @return
      */
     int get(int index) {
-
+        return 0;
     }
 
     /** Entfernt die Zahl an der mit index angegeben Stelle.
@@ -42,6 +42,6 @@ public class MyArrayList {
      * @return
      */
     boolean contains(int value) {
-
+        return false;
     }
 }
